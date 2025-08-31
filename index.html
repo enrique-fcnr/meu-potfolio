@@ -137,11 +137,8 @@
                         </div>
                     </div>
                     <div class="mt-4">
-                        <button onclick="generateAndPlayAudio('project2')" class="text-sm bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full transition-colors duration-300">
-                            <span class="loading-indicator hidden">Carregando...</span>
-                            <span class="button-text">Gerar Áudio</span>
-                        </button>
-                        <audio controls class="mt-2 w-full"></audio>
+                        <button onclick="document.getElementById('audio-player-project2').play()" class="text-sm bg-purple-600 hover:bg-purple-700 text-white font-semibold py-2 px-4 rounded-full w-full transition-colors duration-300 mb-2">Ouvir Proposta</button>
+                        <audio id="audio-player-project2" src="assets/audio/criptaliza-audio.mp3" controls class="w-full"></audio>
                     </div>
                 </div>
                 <!-- Projeto 3 (Cloud & DevOps) -->
