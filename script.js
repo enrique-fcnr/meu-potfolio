@@ -147,8 +147,7 @@ function writeString(view, offset, string) {
 // Dicionário de descrições de projetos
 const projectDescriptions = {
     'project2': "Este é o projeto de Sistema de Notas de Aluno. É um sistema individual que estou desenvolvendo com Java e Spring Boot. O projeto aplica os princípios de orientação a objetos e arquitetura em camadas, com foco em back-end para cadastro de notas e checagem de aprovação. Ele é um exemplo prático do meu conhecimento em desenvolvimento de software e fundamentos de programação.",
-    'project3': "Este é o projeto de Estimativa de Custo de Combustível. Um projeto individual em andamento, também em Java e Spring Boot. O objetivo é criar um sistema para estimar custos, com estudo de integração com serviços AWS, como EC2 e RDS. Este projeto demonstra minha proatividade em expandir meus conhecimentos para a área de cloud computing e infraestrutura.",
-    'project4': "Este é o projeto de Análise de Sentimentos. Um modelo de machine learning para analisar e classificar o sentimento de textos, como avaliações de clientes ou posts em redes sociais. Este projeto demonstra minha capacidade de trabalhar com dados, aplicar conceitos de machine learning e criar ferramentas poderosas para análise de informações."
+    'project3': "Este é o projeto de Estimativa de Custo de Combustível. Um projeto individual em andamento, também em Java e Spring Boot. O objetivo é criar um sistema para estimar custos, com estudo de integração com serviços AWS, como EC2 e RDS. Este projeto demonstra minha proatividade em expandir meus conhecimentos para a área de cloud computing e infraestrutura."
 };
 
 // Função para gerar e reproduzir áudio com exponential backoff

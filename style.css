@@ -41,7 +41,7 @@ body {
     border: 1px solid #3d305d;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border-color 0.3s;
     cursor: pointer;
-    height: 400px; /* Define uma altura fixa para os cards de projeto */
+    height: 460px; /* Define uma altura fixa para os cards de projeto */
 }
 .project-card:hover {
     transform: translateY(-5px) scale(1.02);
@@ -136,4 +136,18 @@ body {
 
 .fade-in-on-scroll.is-visible {
     animation: fadeInSlideUp 1s ease-out forwards;
+}
+
+/* Estilos para o Modal */
+.modal-open {
+    overflow: hidden; /* Evita que a página role quando o modal estiver aberto */
+}
+
+#project-modal-overlay.is-open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#project-modal-content.is-open {
+    transform: scale(1);
 }
