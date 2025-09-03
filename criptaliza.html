@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Criptaliza | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-300 bg-gray-900">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="header relative py-16 sm:py-24 text-center rounded-b-3xl">
+        <div class="header-content-container relative z-10">
+            <!-- Navegação -->
+            <nav class="absolute top-0 inset-x-0 mx-auto px-4 py-4 rounded-b-lg">
+                <div class="flex items-center justify-between container mx-auto">
+                    <!-- Nome na Navbar -->
+                    <span class="font-bold text-xl sm:text-2xl text-white">
+                        <a href="index.html">Enrique Fernandes.</a>
+                    </span>
+                    <div class="flex space-x-4 sm:space-x-8 text-sm sm:text-base">
+                        <a href="index.html#intro" class="hover:text-purple-400 transition-colors duration-300">Início</a>
+                        <a href="index.html#about-section" class="hover:text-purple-400 transition-colors duration-300">Sobre</a>
+                        <a href="index.html#projects-section" class="hover:text-purple-400 transition-colors duration-300">Projetos</a>
+                        <a href="index.html#certifications-section" class="hover:text-purple-400 transition-colors duration-300">Certificações</a>
+                        <a href="index.html#contact-section" class="hover:text-purple-400 transition-colors duration-300">Contato</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="pt-16">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4">Criptaliza</h1>
+                <p class="text-lg sm:text-xl font-light mb-8">
+                    Investimento Eficiente
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <span class="px-3 py-1 bg-red-600 rounded-full text-white text-xs font-semibold">Java</span>
+                    <span class="px-3 py-1 bg-green-600 rounded-full text-white text-xs font-semibold">Spring Boot</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-4 py-8 sm:py-12 space-y-12">
+        <section class="main-section p-6 sm:p-8 rounded-2xl">
+            <h2 class="text-3xl font-bold mb-6 text-white text-center">Sobre o Projeto</h2>
+            <div class="prose max-w-none text-gray-400 leading-relaxed space-y-6">
+                <p>O Criptaliza é um sistema de investimento em criptomoedas, desenvolvido com Java e o framework Spring Boot. O objetivo do projeto é oferecer uma plataforma robusta e segura para os usuários gerenciarem seus investimentos em ativos digitais. A aplicação é modular, com uma arquitetura de back-end bem definida para suportar funcionalidades como cotações em tempo real, histórico de transações e um assistente virtual para auxiliar nas decisões de investimento.</p>
+            </div>
+        </section>
+
+        <section class="main-section p-6 sm:p-8 rounded-2xl">
+            <h2 class="text-3xl font-bold mb-6 text-white text-center">Minha Participação</h2>
+            <div class="prose max-w-none text-gray-400 leading-relaxed space-y-6">
+                <p>Neste projeto, atuei como desenvolvedor back-end, focando na implementação dos serviços e na lógica de negócio. Utilizei o Spring Boot para criar os endpoints da API REST, gerenciando o fluxo de dados entre o front-end (hipotético) e o banco de dados. Minhas responsabilidades incluíram a modelagem de dados, a implementação de regras de negócio para as transações de criptomoedas e a criação de um sistema de interação com o assistente virtual, que processa e responde às consultas dos usuários. O projeto foi uma excelente oportunidade para aprofundar meu conhecimento em Java e na arquitetura de software, garantindo um código limpo, escalável e de fácil manutenção.</p>
+            </div>
+        </section>
+
+        <section class="main-section p-6 sm:p-8 rounded-2xl text-center">
+            <a href="#" target="_blank" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300 glow-button">
+                Ver Projeto no GitHub
+            </a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12 rounded-t-3xl shadow-lg">
+        <p class="text-sm">&copy; 2025 Enrique Fernandes. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

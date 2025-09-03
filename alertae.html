@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Alertae | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-300 bg-gray-900">
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="header relative py-16 sm:py-24 text-center rounded-b-3xl">
+        <div class="header-content-container relative z-10">
+            <!-- Navegação -->
+            <nav class="absolute top-0 inset-x-0 mx-auto px-4 py-4 rounded-b-lg">
+                <div class="flex items-center justify-between container mx-auto">
+                    <!-- Nome na Navbar -->
+                    <span class="font-bold text-xl sm:text-2xl text-white">
+                        <a href="index.html">Enrique Fernandes.</a>
+                    </span>
+                    <div class="flex space-x-4 sm:space-x-8 text-sm sm:text-base">
+                        <a href="index.html#intro" class="hover:text-purple-400 transition-colors duration-300">Início</a>
+                        <a href="index.html#about-section" class="hover:text-purple-400 transition-colors duration-300">Sobre</a>
+                        <a href="index.html#projects-section" class="hover:text-purple-400 transition-colors duration-300">Projetos</a>
+                        <a href="index.html#certifications-section" class="hover:text-purple-400 transition-colors duration-300">Certificações</a>
+                        <a href="index.html#contact-section" class="hover:text-purple-400 transition-colors duration-300">Contato</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="pt-16">
+                <h1 class="text-4xl sm:text-6xl font-extrabold text-white mb-4">Alertae</h1>
+                <p class="text-lg sm:text-xl font-light mb-8">
+                    Monitoramento de Clima
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <span class="px-3 py-1 bg-blue-600 rounded-full text-white text-xs font-semibold">React</span>
+                    <span class="px-3 py-1 bg-purple-600 rounded-full text-white text-xs font-semibold">Firebase</span>
+                    <span class="px-3 py-1 bg-teal-600 rounded-full text-white text-xs font-semibold">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-4 py-8 sm:py-12 space-y-12">
+        <section class="main-section p-6 sm:p-8 rounded-2xl">
+            <h2 class="text-3xl font-bold mb-6 text-white text-center">Sobre o Projeto</h2>
+            <div class="prose max-w-none text-gray-400 leading-relaxed space-y-6">
+                <p>O Alertae é uma aplicação web de monitoramento climático que oferece aos usuários a capacidade de rastrear as condições meteorológicas em tempo real e receber alertas sobre mudanças significativas no clima.</p>
+                <p>A aplicação foi concebida para ser intuitiva e responsiva, garantindo uma experiência de usuário fluida em qualquer dispositivo. A interface foi desenvolvida com React, aproveitando o poder da biblioteca para criar componentes reutilizáveis e uma navegação dinâmica sem a necessidade de recarregar a página. A gestão de dados e autenticação de usuários é feita com Firebase, proporcionando um backend robusto e escalável para lidar com as informações de clima em constante mudança.</p>
+            </div>
+        </section>
+
+        <section class="main-section p-6 sm:p-8 rounded-2xl">
+            <h2 class="text-3xl font-bold mb-6 text-white text-center">Minha Participação</h2>
+            <div class="prose max-w-none text-gray-400 leading-relaxed space-y-6">
+                <p>Como desenvolvedor principal do projeto, fui responsável por todo o desenvolvimento do front-end com React, incluindo a criação da arquitetura de componentes, a gestão de estados com Hooks e a implementação de uma experiência de usuário acessível e agradável. No backend, integrei a aplicação com o Firebase para gerenciar dados de usuário e autenticação, configurando as regras de segurança necessárias e as funções de armazenamento para garantir que as informações de clima fossem recuperadas de forma eficiente e segura. Meu trabalho também incluiu a otimização de performance da aplicação e a garantia de que o design responsivo funcionasse perfeitamente em telas de todos os tamanhos.</p>
+            </div>
+        </section>
+
+        <section class="main-section p-6 sm:p-8 rounded-2xl text-center">
+            <a href="#" target="_blank" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300 glow-button">
+                Ver Projeto no GitHub
+            </a>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12 rounded-t-3xl shadow-lg">
+        <p class="text-sm">&copy; 2025 Enrique Fernandes. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
