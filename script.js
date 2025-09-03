@@ -144,90 +144,11 @@ function writeString(view, offset, string) {
     }
 }
 
-// Dicionário de descrições de projetos
-const projectDescriptions = {
-    'project2': "Este é o projeto de Sistema de Notas de Aluno. É um sistema individual que estou desenvolvendo com Java e Spring Boot. O projeto aplica os princípios de orientação a objetos e arquitetura em camadas, com foco em back-end para cadastro de notas e checagem de aprovação. Ele é um exemplo prático do meu conhecimento em desenvolvimento de software e fundamentos de programação.",
-    'project3': "Este é o projeto de Estimativa de Custo de Combustível. Um projeto individual em andamento, também em Java e Spring Boot. O objetivo é criar um sistema para estimar custos, com estudo de integração com serviços AWS, como EC2 e RDS. Este projeto demonstra minha proatividade em expandir meus conhecimentos para a área de cloud computing e infraestrutura."
-};
 
-// Função para gerar e reproduzir áudio com exponential backoff
-async function generateAndPlayAudio(projectId) {
-    const projectContainer = document.querySelector(`[data-project-id="${projectId}"]`);
-    const button = projectContainer.querySelector('button');
-    const audioPlayer = projectContainer.querySelector('audio');
-    const loadingIndicator = projectContainer.querySelector('.loading-indicator');
-    const buttonText = projectContainer.querySelector('.button-text');
-    
-    const description = projectDescriptions[projectId] || "Descrição do projeto não encontrada.";
 
-    // Oculta o texto do botão e mostra o indicador de carregamento
-    buttonText.classList.add('hidden');
-    loadingIndicator.classList.remove('hidden');
-    button.disabled = true;
 
-    const payload = {
-        contents: [{
-            parts: [{ text: description }]
-        }],
-        generationConfig: {
-            responseModalities: ["AUDIO"],
-            speechConfig: {
-                voiceConfig: {
-                    prebuiltVoiceConfig: { voiceName: "Iapetus" }
-                }
-            }
-        },
-        model: "gemini-2.5-flash-preview-tts"
-    };
-
-    const apiKey = ""; // A chave da API será fornecida em tempo de execução
-    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
-
-    let retryCount = 0;
-    const maxRetries = 5;
-
-    while (retryCount < maxRetries) {
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(payload)
-            });
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            const result = await response.json();
-            const part = result?.candidates?.[0]?.content?.parts?.[0];
-            const audioData = part?.inlineData?.data;
-            const mimeType = part?.inlineData?.mimeType;
-
-            if (audioData && mimeType && mimeType.startsWith("audio/")) {
-                const sampleRate = parseInt(mimeType.match(/rate=(\d+)/)[1], 10);
-                const pcmData = Uint8Array.from(atob(audioData), c => c.charCodeAt(0));
-                const pcm16 = new Int16Array(pcmData.buffer);
-
-                const wavBlob = pcmToWav(pcm16, sampleRate);
-                const audioUrl = URL.createObjectURL(wavBlob);
-                
-                audioPlayer.src = audioUrl;
-                audioPlayer.play();
-                break; // Sai do loop de retentativas
-            } else {
-                throw new Error("Resposta da API de áudio inesperada ou incompleta.");
-            }
-        } catch (error) {
-            console.error("Falha ao gerar áudio:", error);
-            retryCount++;
-            const delay = Math.pow(2, retryCount) * 1000;
-            console.log(`Retentando em ${delay / 1000} segundos... (Tentativa ${retryCount} de ${maxRetries})`);
-            await new Promise(resolve => setTimeout(resolve, delay));
-        }
-    }
 
     // Oculta o indicador de carregamento e mostra o texto do botão
     loadingIndicator.classList.add('hidden');
     buttonText.classList.remove('hidden');
     button.disabled = false;
-}
